@@ -24,7 +24,8 @@ class Post(models.Model):
     title=models.CharField(max_length=200)
     slug=models.CharField(max_length=200)
     email=models.EmailField()
-    salery=models.IntegerField()
+    #2nd 
+    salery=models.IntegerField() 
     details=models.TextField()
     available=models.BooleanField()
     category=models.CharField(max_length=100,choices=categories)
