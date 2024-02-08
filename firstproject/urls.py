@@ -20,13 +20,17 @@ Including another URLconf
 #to create a url use path() the path takes the url then the views functions name
 #then name='url name' this name is used to use this in future like laravel
 
-
+#--------------part 15--------------
+#image uploading
+#to show the uploaded images add static
 
 from django.contrib import admin
 from django.urls import path,include
 from .views import home
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("home/",home,name="home"),
     path('tuition/',include('tuition.urls')),
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
