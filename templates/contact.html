@@ -1,6 +1,7 @@
 {% extends "basic.html" %}
 {% block body %}
 <h1> Contact form</h1>
+{% load crispy_forms_tags %}
 <form method="post">
     {% csrf_token %}
     {{form}}
